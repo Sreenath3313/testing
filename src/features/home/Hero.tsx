@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import OptimizedImage from './common/OptimizedImage';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 // Animation variants for staggered children
 const containerVariants = {

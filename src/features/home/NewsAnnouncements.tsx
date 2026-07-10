@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { newsUpdates } from '../data/news';
+import { newsUpdates } from '../../data/news';
 
 const NewsAnnouncements: React.FC = () => {
     const ref = useRef(null);

@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { facultyProfiles } from '../data/faculty';
+import { facultyProfiles } from '../../data/faculty';
 
 const FacultySpotlight: React.FC = () => {
     const ref = useRef(null);

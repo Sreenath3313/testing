@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { departments } from '../data/departments';
+import { departments } from '../../data/departments';
 import { Users, Microscope, GraduationCap, Briefcase } from 'lucide-react';
 
 const deptImages: Record<string, string> = {

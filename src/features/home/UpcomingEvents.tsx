@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { upcomingEvents } from '../data/events';
+import { upcomingEvents } from '../../data/events';
 
 const UpcomingEvents: React.FC = () => {
     const ref = useRef(null);

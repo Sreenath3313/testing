@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { infrastructureData } from '../data/infrastructure';
-import OptimizedImage from './common/OptimizedImage';
+import { infrastructureData } from '../../data/infrastructure';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 const webpImageMap: Record<string, string> = {
     '/library.jpg': '/library.webp',

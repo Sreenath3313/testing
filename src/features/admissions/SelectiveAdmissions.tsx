@@ -1,5 +1,5 @@
 import React from 'react';
-import OptimizedImage from './common/OptimizedImage';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 const SelectiveAdmissions: React.FC = () => {
     return (

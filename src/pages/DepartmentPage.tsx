@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getDepartmentBySlug, type DepartmentData } from '../data/departments';
-import DepartmentAbout from '../components/department/DepartmentAbout';
-import DepartmentFaculty from '../components/department/DepartmentFaculty';
-import DepartmentStudents from '../components/department/DepartmentStudents';
-import DepartmentGallery from '../components/department/DepartmentGallery';
-import DepartmentCourseStructure from '../components/department/DepartmentCourseStructure';
-import DepartmentProjects from '../components/department/DepartmentProjects';
-import DepartmentOverview from '../components/department/DepartmentOverview';
+import DepartmentAbout from '../features/departments/DepartmentAbout';
+import DepartmentFaculty from '../features/departments/DepartmentFaculty';
+import DepartmentStudents from '../features/departments/DepartmentStudents';
+import DepartmentGallery from '../features/departments/DepartmentGallery';
+import DepartmentCourseStructure from '../features/departments/DepartmentCourseStructure';
+import DepartmentProjects from '../features/departments/DepartmentProjects';
+import DepartmentOverview from '../features/departments/DepartmentOverview';
 import { Info, BookOpen, Layers, GraduationCap, Users, Image as ImageIcon, FileText } from 'lucide-react';
 
 const getSidebarItems = (dept: DepartmentData) => {

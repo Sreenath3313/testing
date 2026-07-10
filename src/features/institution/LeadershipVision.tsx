@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import OptimizedImage from './common/OptimizedImage';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 const LeadershipVision: React.FC = () => {
     const ref = useRef(null);

@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import OptimizedImage from './common/OptimizedImage';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 const About: React.FC = () => {
     const ref = useRef(null);

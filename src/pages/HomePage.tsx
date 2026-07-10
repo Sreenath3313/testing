@@ -1,19 +1,19 @@
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Stats from '../components/Stats';
-import About from '../components/About';
-import CampusLife from '../components/CampusLife';
-import AlumniSuccess from '../components/AlumniSuccess';
-import Placements from '../components/Placements';
-import UpcomingEvents from '../components/UpcomingEvents';
-import Admissions from '../components/Admissions';
-import Footer from '../components/Footer';
-import Accreditations from '../components/Accreditations';
-import GlobalTieUps from '../components/GlobalTieUps';
-import LeadershipVision from '../components/LeadershipVision';
-import SocialMediaFeeds from '../components/SocialMediaFeeds';
-import CSRActivities from '../components/CSRActivities';
-import StudentAchievements from '../components/StudentAchievements';
+import Navbar from '../components/layout/Navbar';
+import Hero from '../features/home/Hero';
+import Stats from '../features/home/Stats';
+import About from '../features/home/About';
+import CampusLife from '../features/campus/CampusLife';
+import AlumniSuccess from '../features/placements/AlumniSuccess';
+import Placements from '../features/placements/Placements';
+import UpcomingEvents from '../features/home/UpcomingEvents';
+import Admissions from '../features/admissions/Admissions';
+import Footer from '../components/layout/Footer';
+import Accreditations from '../features/home/Accreditations';
+import GlobalTieUps from '../features/institution/GlobalTieUps';
+import LeadershipVision from '../features/institution/LeadershipVision';
+import SocialMediaFeeds from '../features/home/SocialMediaFeeds';
+import CSRActivities from '../features/institution/CSRActivities';
+import StudentAchievements from '../features/campus/StudentAchievements';
 
 const HomePage: React.FC = () => {
     return (

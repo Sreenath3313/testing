@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import OptimizedImage from './common/OptimizedImage';
+import OptimizedImage from '../../components/common/OptimizedImage';
 
 const campusItems = [
     {

@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { MapPin, Briefcase, ArrowUpRight } from 'lucide-react';
-import { alumniStories } from '../data/alumni';
+import { alumniStories } from '../../data/alumni';
 
 const AlumniSuccess: React.FC = () => {
     const ref = useRef(null);

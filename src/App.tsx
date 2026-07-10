@@ -6,7 +6,7 @@ import DepartmentPage from './pages/DepartmentPage'
 import AllDepartmentsPage from './pages/AllDepartmentsPage'
 import MessageFromHead from './pages/MessageFromHead'
 import NdliClubPage from './pages/NdliClubPage'
-import AdmissionsPopup from './components/AdmissionsPopup'
+import AdmissionsPopup from './features/admissions/AdmissionsPopup'
 import { useReveal } from './hooks/useReveal'
 
 function ScrollToTop() {

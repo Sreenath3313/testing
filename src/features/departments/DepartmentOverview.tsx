@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { DepartmentData } from '../../data/departments';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import SpreadsheetTable from '../common/SpreadsheetTable';
+import SpreadsheetTable from '../../components/common/SpreadsheetTable';
 
 interface DepartmentOverviewProps {
     dept: DepartmentData;
