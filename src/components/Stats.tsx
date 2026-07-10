@@ -123,9 +123,9 @@ const Stats: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.06]" />
             <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
 
-            <div className="relative py-14 lg:py-20">
+            <div className="relative py-10 lg:py-20">
                 <div className="section-container">
-                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-y-12 lg:gap-y-0">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4 lg:gap-y-0 lg:gap-x-8">
                         {stats.map((stat, i) => (
                             <CounterCard
                                 key={stat.label}

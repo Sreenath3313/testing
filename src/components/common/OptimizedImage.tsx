@@ -21,7 +21,7 @@ function OptimizedImage({
 
     if (webpSrc) {
         return (
-            <picture>
+            <picture className="contents">
                 <source srcSet={webpSrc} type="image/webp" />
                 <img
                     src={src}

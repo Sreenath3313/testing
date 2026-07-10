@@ -24,7 +24,7 @@ const duplicatedAchievements = [...achievements, ...achievements];
 
 const StudentAchievements: React.FC = () => {
     return (
-        <section id="student-achievements" className="py-16 md:py-20 bg-[#fcd4a6] overflow-hidden border-t border-orange-200">
+        <section id="student-achievements" className="py-10 md:py-20 bg-[#fcd4a6] overflow-hidden border-t border-orange-200">
             <div className="section-container mb-12">
                 <h2 className="text-3xl md:text-4xl font-black text-[#0a2540] mb-4">
                     Students Achievements
@@ -51,11 +51,11 @@ const StudentAchievements: React.FC = () => {
                     {duplicatedAchievements.map((item, idx) => (
                         <div
                             key={idx}
-                            className="relative w-[320px] md:w-[450px] shrink-0 mx-4 md:mx-6 flex flex-col justify-between"
+                            className="relative w-[280px] sm:w-[320px] md:w-[450px] shrink-0 mx-3 sm:mx-4 md:mx-6 flex flex-col justify-between"
                         >
                             {/* Simple Card Content */}
-                            <div className="relative z-10 bg-orange-300 p-8 md:p-10 rounded-2xl h-full flex flex-col shadow-sm">
-                                <p className="text-neutral-900 text-base md:text-lg leading-relaxed text-left mb-10 flex-grow">
+                            <div className="relative z-10 bg-orange-300 p-6 md:p-10 rounded-2xl h-full flex flex-col shadow-sm">
+                                <p className="text-neutral-900 text-sm md:text-lg leading-relaxed text-left mb-6 md:mb-10 flex-grow">
                                     {item.quote}
                                 </p>
                                 <div className="text-right mt-auto">

@@ -23,7 +23,7 @@ const Departments: React.FC = () => {
     const standardDepts = [departments[0], ...departments.slice(2)];
 
     return (
-        <section id="departments" ref={ref} className="section-y-lg bg-warm-50 relative overflow-hidden" style={{ zoom: 0.9 } as React.CSSProperties}>
+        <section id="departments" ref={ref} className="section-y-lg bg-warm-50 relative overflow-hidden">
 
 
             <div className="section-container relative z-10">

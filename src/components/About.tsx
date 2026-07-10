@@ -7,10 +7,10 @@ const About: React.FC = () => {
     const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
-        <section id="about" ref={ref} className="min-h-screen flex items-center bg-white relative overflow-hidden py-16 lg:py-4">
+        <section id="about" ref={ref} className="min-h-screen flex items-center bg-white relative overflow-hidden py-10 lg:py-4">
 
             <div className="section-container relative z-10 max-w-7xl mx-auto">
-                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                     {/* Left — text */}
                     <motion.div
                         className="lg:col-span-6 pr-0 lg:pr-12"
@@ -19,13 +19,13 @@ const About: React.FC = () => {
                         transition={{ duration: 0.8 }}
                     >
                         {/* Accent bar */}
-                        <div className="w-20 h-[3px] bg-primary mb-5" />
+                        <div className="w-16 lg:w-20 h-[3px] bg-primary mb-4 lg:mb-5" />
 
-                        <p className="label-caps text-primary text-sm lg:text-base font-bold tracking-[0.25em] mb-5">
+                        <p className="label-caps text-primary text-xs lg:text-sm font-bold tracking-[0.25em] mb-3 lg:mb-5">
                             About SRIT
                         </p>
 
-                        <h2 className="heading-lg text-neutral-dark text-4xl lg:text-5xl font-black mb-8">
+                        <h2 className="heading-lg text-neutral-dark text-3xl sm:text-4xl lg:text-5xl font-black mb-6 lg:mb-8">
                             Inspired by the Legacy of
                             <br />
                             Srinivasa Ramanujan

@@ -21,15 +21,17 @@ function ScrollToTop() {
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <AdmissionsPopup />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/departments" element={<AllDepartmentsPage />} />
-        <Route path="/department/:slug/*" element={<DepartmentPage />} />
-        <Route path="/message-from-head" element={<MessageFromHead />} />
-        <Route path="/ndli-club" element={<NdliClubPage />} />
-      </Routes>
+      <div className="w-full overflow-x-hidden flex flex-col min-h-screen">
+        <ScrollToTop />
+        <AdmissionsPopup />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/departments" element={<AllDepartmentsPage />} />
+          <Route path="/department/:slug/*" element={<DepartmentPage />} />
+          <Route path="/message-from-head" element={<MessageFromHead />} />
+          <Route path="/ndli-club" element={<NdliClubPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }

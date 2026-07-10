@@ -54,9 +54,9 @@ const Placements: React.FC = () => {
     };
 
     return (
-        <section id="placements" ref={ref} className="relative py-16 lg:py-20 bg-white border-t border-neutral-200/60 text-neutral-800 overflow-hidden">
+        <section id="placements" ref={ref} className="relative py-10 lg:py-20 bg-white border-t border-neutral-200/60 text-neutral-800 overflow-hidden">
             <div className="section-container max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                     
                     {/* Left Side: Content & Stats */}
                     <motion.div 

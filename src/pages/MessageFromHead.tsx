@@ -26,7 +26,7 @@ const MessageFromHead: React.FC = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="font-serif text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight"
+                            className="font-serif text-3xl lg:text-5xl font-bold text-neutral-900 tracking-tight"
                         >
                             Message from the Principal
                         </motion.h1>

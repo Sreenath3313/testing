@@ -164,18 +164,18 @@ const DepartmentPage: React.FC = () => {
                 </aside>
 
                 {/* Main Content */}
-                <main className="flex-1 lg:ml-[270px] min-h-screen">
+                <main className="flex-1 min-w-0 lg:ml-[270px] min-h-screen">
                     <section className="relative overflow-hidden min-h-[300px] lg:min-h-[400px] flex items-end">
                         <div className="absolute inset-0">
                             <img src={dept.image} alt={dept.fullName} className="w-full h-full object-cover" />
                             {/* Replaced the harsh orange with a premium cinematic dark gradient for text legibility */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                         </div>
-                        <div className="relative z-10 px-4 sm:px-6 py-10 sm:py-12 lg:px-12 lg:py-16 w-full">
-                            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+                        <div className="relative z-10 px-4 sm:px-6 py-8 sm:py-12 lg:px-12 lg:py-16 w-full">
+                            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
                                 {dept.fullName}
                             </h1>
-                            <p className="text-white/90 text-lg lg:text-xl mt-4 max-w-3xl font-medium">
+                            <p className="text-white/90 text-base sm:text-lg lg:text-xl mt-3 sm:mt-4 max-w-3xl font-medium">
                                 {dept.tagline}
                             </p>
                         </div>

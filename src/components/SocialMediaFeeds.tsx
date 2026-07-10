@@ -37,7 +37,7 @@ const SocialMediaFeeds: React.FC = () => {
     }, []);
 
     return (
-        <section ref={ref} className="pt-16 lg:pt-20 pb-4 lg:pb-8 bg-neutral-50 relative overflow-hidden">
+        <section ref={ref} className="pt-10 lg:pt-20 pb-4 lg:pb-8 bg-neutral-50 relative overflow-hidden">
             <div className="section-container">
                 {/* Header */}
                 <motion.div

@@ -42,22 +42,22 @@ const UpcomingEvents: React.FC = () => {
                                 initial={{ opacity: 0, x: 30 }}
                                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                                className={`group flex flex-col sm:flex-row sm:items-center gap-6 py-8 cursor-pointer ${i !== 0 ? 'border-t border-neutral-200' : ''
+                                className={`group flex flex-row items-center gap-4 sm:gap-6 py-6 sm:py-8 cursor-pointer ${i !== 0 ? 'border-t border-neutral-200' : ''
                                     }`}
                             >
                                 {/* Date Box */}
-                                <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 flex flex-col items-center justify-center bg-white border border-neutral-200/80 rounded-lg group-hover:bg-primary group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-400">
-                                    <span className="text-neutral-400 text-xs font-bold tracking-[0.2em] group-hover:text-white/80 transition-colors">
+                                <div className="flex-shrink-0 w-20 h-20 sm:w-28 sm:h-28 flex flex-col items-center justify-center bg-white border border-neutral-200/80 rounded-lg group-hover:bg-primary group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-400">
+                                    <span className="text-neutral-400 text-[10px] sm:text-xs font-bold tracking-[0.2em] group-hover:text-white/80 transition-colors">
                                         {event.month}
                                     </span>
-                                    <span className="font-serif text-3xl sm:text-4xl font-bold text-neutral-800 mt-1 group-hover:text-white transition-colors">
+                                    <span className="font-serif text-2xl sm:text-4xl font-bold text-neutral-800 mt-0.5 sm:mt-1 group-hover:text-white transition-colors">
                                         {event.day}
                                     </span>
                                 </div>
 
                                 {/* Event Info */}
-                                <div className="flex-1">
-                                    <p className="label-caps text-primary/80 mb-2 group-hover:text-primary transition-colors">
+                                <div className="flex-1 min-w-0">
+                                    <p className="label-caps text-primary/80 mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
                                         {event.type}
                                     </p>
                                     <h3 className="font-serif text-xl sm:text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-primary transition-colors">

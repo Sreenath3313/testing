@@ -61,22 +61,22 @@ const CampusLife: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section ref={ref} className="py-20 md:py-32 bg-neutral-50/50 relative overflow-hidden font-sans border-t border-neutral-200/60">
+        <section ref={ref} className="py-12 md:py-32 bg-neutral-50/50 relative overflow-hidden font-sans border-t border-neutral-200/60">
             {/* Background Grid Pattern */}
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTAgMjBoNDBNMCAzMGg0ME0xMCAwdjQwTTIwIDB2NDBNMzAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDAsIDAsIDAsIDAuMDIpIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] opacity-60"></div>
 
             <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 {/* Header */}
-                <div className="mb-12 md:mb-16">
+                <div className="mb-8 md:mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="text-[#ea580c] font-sans font-bold text-[11px] md:text-sm tracking-[0.25em] uppercase mb-4 block">
+                        <span className="text-[#ea580c] font-sans font-bold text-[10px] md:text-sm tracking-[0.25em] uppercase mb-3 md:mb-4 block">
                             GALLERY INTERFACE
                         </span>
-                        <h2 className="font-sans text-5xl md:text-6xl lg:text-7xl font-black text-neutral-900 tracking-tighter uppercase leading-[0.9]">
+                        <h2 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-neutral-900 tracking-tighter uppercase leading-[1.0] md:leading-[0.9]">
                             CAMPUS <span className="text-neutral-300">ARCHIVE</span>
                         </h2>
                     </motion.div>

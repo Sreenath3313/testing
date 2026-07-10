@@ -16,13 +16,13 @@ const AlumniSuccess: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-black text-neutral-900 mb-12"
+                    className="text-3xl md:text-5xl font-black text-neutral-900 mb-8 md:mb-12"
                 >
                     Alumni Success Stories
                 </motion.h2>
 
                 {/* Cards Grid — exactly 3 per row like the reference image */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-[1300px]">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-[1300px]">
                     {alumniStories.slice(0, 3).map((alumni, i) => (
                         <motion.div
                             key={alumni.id}

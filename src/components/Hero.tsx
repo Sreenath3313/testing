@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import OptimizedImage from './common/OptimizedImage';
 
@@ -23,39 +24,69 @@ const itemVariants = {
     }
 };
 
+const HERO_IMAGES = [
+    { src: "/CollegeMain.jpg", webpSrc: "/CollegeMain.webp", alt: "SRIT Main Building" },
+    { src: "/BasketBall.JPG", webpSrc: "/BasketBall.webp", alt: "SRIT Basketball Court" },
+    { src: "/Campus.JPG", webpSrc: "/Campus.webp", alt: "SRIT Campus Architecture" },
+    { src: "/library.jpg", webpSrc: "/library.webp", alt: "SRIT Central Library" },
+    { src: "/ComputerLab.JPG", webpSrc: "/ComputerLab.webp", alt: "SRIT Computer Lab" },
+    { src: "/College 2.JPG", webpSrc: undefined, alt: "SRIT Campus View" }
+];
+
 const Hero: React.FC = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+        }, 5000); // 5 seconds per slide
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-        <section className="relative min-h-[100svh] w-full bg-neutral-dark overflow-hidden flex flex-col lg:block">
+        <section className="flex flex-col lg:grid relative min-h-[100svh] w-full bg-neutral-dark overflow-hidden">
             
-            {/* Background Image: Full Bleed underneath everything */}
-            <div className="absolute inset-0 z-0">
-                <OptimizedImage
-                    src="/CollegeMain.jpg"
-                    webpSrc="/CollegeMain.webp"
-                    alt="SRIT campus"
-                    eager
-                    sizes="100vw"
-                    className="w-full h-full object-cover object-center"
-                />
-                {/* Full-bleed uniform dark mask overlay */}
-                <div className="absolute inset-0 bg-black/40" />
+            {/* Background Image Carousel: 9:16 on mobile, Full Bleed on desktop */}
+            <div className="relative w-full aspect-[9/16] shrink-0 lg:aspect-auto lg:h-auto lg:col-start-1 lg:row-start-1 lg:w-full lg:h-full z-0 overflow-hidden">
+                <AnimatePresence>
+                    <motion.div
+                        key={currentIndex}
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                        className="absolute inset-0 w-full h-full"
+                    >
+                        <OptimizedImage
+                            src={HERO_IMAGES[currentIndex].src}
+                            webpSrc={HERO_IMAGES[currentIndex].webpSrc}
+                            alt={HERO_IMAGES[currentIndex].alt}
+                            eager={currentIndex === 0}
+                            sizes="100vw"
+                            className="absolute inset-0 w-full h-full object-cover object-center"
+                        />
+                    </motion.div>
+                </AnimatePresence>
+                
+                {/* Gradient fade to blend with bottom content on mobile (kept to prevent sharp cut-off on mobile text block) */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-neutral-dark to-transparent lg:hidden z-10 pointer-events-none" />
             </div>
 
-            {/* Left Side: Smooth Gradient Panel (No Blur) */}
+            {/* Left Side Content: Solid block on mobile, overlay on desktop */}
             <motion.div 
                 initial={{ x: '-100%' }}
                 animate={{ x: 0 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-                className="relative lg:absolute top-0 left-0 bottom-0 z-10 w-full lg:w-[65%] xl:w-[55%] flex flex-col justify-center py-20 lg:py-0 px-6 sm:px-12 xl:px-20 gpu-accelerated content-contained"
+                className="relative flex-1 bg-neutral-dark lg:bg-transparent lg:bg-gradient-to-r lg:from-black/90 lg:via-black/50 lg:to-transparent lg:col-start-1 lg:row-start-1 lg:absolute top-0 left-0 bottom-0 z-10 w-full lg:w-[75%] xl:w-[65%] flex flex-col justify-center py-12 lg:py-0 px-5 sm:px-12 xl:px-20 gpu-accelerated content-contained"
             >
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate="show"
-                    className="flex flex-col max-w-xl"
+                    className="flex flex-col max-w-xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
                 >
                     {/* Location Badge */}
-                    <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6 lg:mb-10">
+                    <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6 lg:mb-10 mt-12 lg:mt-0">
                         <span className="w-12 h-1 bg-primary" />
                         <span className="text-white font-bold tracking-[0.25em] uppercase text-xs drop-shadow-sm">
                             Anantapur, AP
@@ -94,7 +125,6 @@ const Hero: React.FC = () => {
                     </motion.div>
                 </motion.div>
             </motion.div>
-
         </section>
     );
 };
