@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 // To display a live Instagram feed without complex backend authentication or paid third-party tools, 
 // a free customized widget must be created by the account owner on platforms like Curator.io, Elfsight, or Taggbox.
@@ -23,6 +22,17 @@ const SocialMediaFeeds: React.FC = () => {
             script.src = "https://elfsightcdn.com/platform.js";
             script.async = true;
             document.body.appendChild(script);
+        }
+
+        const twScriptId = 'twitter-wjs';
+        let twScript = document.getElementById(twScriptId) as HTMLScriptElement;
+        if (!twScript) {
+            twScript = document.createElement('script');
+            twScript.id = twScriptId;
+            twScript.src = "https://platform.twitter.com/widgets.js";
+            twScript.async = true;
+            twScript.charset = 'utf-8';
+            document.body.appendChild(twScript);
         }
     }, []);
 
@@ -113,11 +123,13 @@ const SocialMediaFeeds: React.FC = () => {
                             </div>
                             <div className="flex-1 w-full bg-white relative overflow-hidden mt-2">
                                 <div id="twitter-feed-container" className="absolute top-0 left-0 w-full h-full overflow-y-auto custom-scrollbar bg-white p-2 flex justify-center">
-                                    <TwitterTimelineEmbed
-                                        sourceType="profile"
-                                        screenName="sritatp"
-                                        options={{height: 550}}
-                                    />
+                                    <a 
+                                        className="twitter-timeline" 
+                                        data-height="550" 
+                                        href="https://twitter.com/sritatp"
+                                    >
+                                        Tweets by @sritatp
+                                    </a>
                                 </div>
                             </div>
                         </div>
