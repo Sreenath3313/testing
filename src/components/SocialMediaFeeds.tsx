@@ -6,7 +6,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // a free customized widget must be created by the account owner on platforms like Curator.io, Elfsight, or Taggbox.
 // For this template, we are using a placeholder iframe that perfectly mimics a live feed widget 
 // until an actual Widget ID is provided by the SRIT admin.
-const INSTAGRAM_WIDGET_PLACEHOLDER = "https://www.instagram.com/sritatp/embed";
+
 
 const SocialMediaFeeds: React.FC = () => {
     const ref = useRef(null);

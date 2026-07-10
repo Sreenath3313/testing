@@ -148,12 +148,6 @@ const AlumniSuccess: React.FC = () => {
                     </a>
                 </motion.div>
 
-            </div>text-orange-700 hover:text-orange-900 font-bold text-lg md:text-xl transition-colors">
-                        View More
-                        <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                </motion.div>
-
             </div>
         </section>
     );

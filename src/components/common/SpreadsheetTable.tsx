@@ -3,6 +3,7 @@ import Papa from 'papaparse';
 
 export interface SpreadsheetTableProps {
     sheetUrls?: Record<string, string>;
+    editUrls?: Record<string, string>;
     fallbackColumns: string[];
     fallbackData?: Record<string, Array<Record<string, string | number>>>;
     availableYears?: string[];
@@ -46,7 +47,7 @@ const SpreadsheetTable: React.FC<SpreadsheetTableProps> = ({
                             }
                             setIsLoading(false);
                         },
-                        error: (error) => {
+                        error: (error: any) => {
                             console.error('Error parsing CSV:', error);
                             setIsLoading(false);
                         }
